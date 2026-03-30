@@ -170,7 +170,7 @@ input.addEventListener("input", function (e) {
       searchres.classList.remove('active');
       return;
     }
-    fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${value}`)
+    fetch(`https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${value}`)
       .then(res => res.json())
       .then(data => {
         searchresult.innerHTML = '';
@@ -690,23 +690,23 @@ function products(e, add) {
 }
 
 fetch(
-  "http://makeup-api.herokuapp.com/api/v1/products.json?product_type=mascara",
+  "https://makeup-api.herokuapp.com/api/v1/products.json?product_type=mascara",
 )
   .then((res) => res.json())
   .then((data) => products(data, document.querySelector(".slider-prod")));
 
 fetch(
-  "http://makeup-api.herokuapp.com/api/v1/products.json?product_type=lipstick",
+  "https://makeup-api.herokuapp.com/api/v1/products.json?product_type=lipstick",
 )
   .then((res) => res.json())
   .then((data) => products(data, document.querySelector(".slider-prod2")));
 
-fetch("http://makeup-api.herokuapp.com/api/v1/products.json?product_type=blush")
+fetch("https://makeup-api.herokuapp.com/api/v1/products.json?product_type=blush")
   .then((res) => res.json())
   .then((data) => products(data, document.querySelector(".slider-prod3")));
 
 fetch(
-  "http://makeup-api.herokuapp.com/api/v1/products.json?product_type=bronzer",
+  "https://makeup-api.herokuapp.com/api/v1/products.json?product_type=bronzer",
 )
   .then((res) => res.json())
   .then((data) => products(data, document.querySelector(".slider-prod4")));
