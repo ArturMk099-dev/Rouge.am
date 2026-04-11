@@ -1241,4 +1241,9 @@ button {
   margin-top: 5px;
 }
 
+.video-content {
+  width: 70%;
+  height: 30%;
+}
+
 }
