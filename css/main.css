@@ -1130,10 +1130,16 @@ button {
    display: flex;
    justify-content: center;
   }
+  .clip-wrap{
+    width: 100%;
+  }
   .stori-col {
    flex: 0 0 100%;
    display: flex;
    justify-content: center;
+  }
+  .stori-wrap{
+    width: 100%;
   }
   .prod-col {
    flex: 0 0 100%;
@@ -1145,6 +1151,7 @@ button {
    display: flex;
    justify-content: center;
   }
+
   #footer .row{
     flex-wrap: wrap;
   }
@@ -1222,6 +1229,15 @@ button {
   position: fixed;
   right: 25px;
   top: 100px;
+}
+.loc-over {
+  position: static;
+  background-color: #d71117;
+  color: white;
+  opacity: unset;
+  width: 100%;
+  height: 100px;
+  padding-top: 5px;
 }
 
 }
