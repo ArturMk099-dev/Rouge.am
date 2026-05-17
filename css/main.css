@@ -1072,7 +1072,7 @@ button {
   padding: 10px;
 }
 .head-search {
-  border-radius: 15px;
+  border-radius: 15px 15px  0 0;
   background-color: rgb(198, 198, 198);
   padding: 10px 20px;
 }
@@ -1103,6 +1103,25 @@ button {
   color: black;
 }
 
+.suggestions{
+  width: 100%;
+  background: #d71117;
+  border: 1px solid #d71117;
+  border-radius: 0 0 15px 15px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.suggest-item{
+  padding:10px;
+  cursor:pointer;
+  transition: all 0.3s linear;
+}
+
+.suggest-item:hover{
+  background:#f3f3f3;
+  color: #d71117;
+}
 .mobile {
   display: none;
 }

@@ -141,7 +141,7 @@ let search = document.querySelector('.search');
 let szone = document.querySelector('.row-search');
 let searchresult = document.querySelector('.search-result');
 let input = document.querySelector(".h-search");
-
+let suggestions = document.querySelector('.suggestions');
 let firstcl = 0;
 let timeout; 
 
@@ -161,43 +161,85 @@ search.addEventListener('click', function () {
   }
 });
 
-input.addEventListener("input", function (e) {
-    clearTimeout(timeout);
+input.addEventListener("input", function () {
+
+  clearTimeout(timeout);
+
   timeout = setTimeout(() => {
-    let value = input.value.trim();
+
+    let value = input.value.trim().toLowerCase();
+
     if (value.length < 2) {
       searchresult.innerHTML = '';
       searchres.classList.remove('active');
+
+      suggestions.innerHTML = '';
       return;
     }
-    fetch(`https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${value}`)
+
+    fetch('https://makeup-api.herokuapp.com/api/v1/products.json')
       .then(res => res.json())
       .then(data => {
+
+        let filtered = data.filter(item => {
+
+          return (
+            item.name?.toLowerCase().includes(value) ||
+            item.brand?.toLowerCase().includes(value) ||
+            item.product_type?.toLowerCase().includes(value) ||
+            item.category?.toLowerCase().includes(value)
+          );
+
+        });
+
+        // 🔥 CLEAR OLD
+        suggestions.innerHTML = '';
+
+        // 🔥 COLLECT UNIQUE SUGGESTIONS
+        let seen = [];
+
+        filtered.slice(0, 10).forEach(item => {
+
+          let text =
+            item.name ||
+            item.brand ||
+            item.product_type ||
+            item.category;
+
+          if (text && !seen.includes(text)) {
+            seen.push(text);
+
+            let div = document.createElement('div');
+            div.classList.add('suggest-item');
+            div.innerText = text;
+
+            suggestions.append(div);
+
+            // CLICK ON SUGGESTION
+            div.addEventListener('click', () => {
+              input.value = text;
+              suggestions.innerHTML = '';
+            });
+          }
+
+        });
+
         searchresult.innerHTML = '';
 
-        if (data.length === 0) {
+        if(filtered.length === 0){
           searchres.classList.remove('active');
           return;
         }
 
         searchres.classList.add('active');
-        products(data,searchresult);
+
+        products(filtered, searchresult);
+
       })
       .catch(err => console.log(err));
-  }, 300);
-   
-    // fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${value}`)
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     searchresult.innerHTML = '';
-    //     if (data.length === 0) {
-    //       searchres.classList.remove('active');
-    //       return;
-    //     }
-    //     searchres.classList.add('active');
-    //     products(data, searchresult);
-    //   })
-    //   .catch(err => console.log(err));
+
+  },300);
+
 });
 
 /////////
