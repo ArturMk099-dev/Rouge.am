@@ -917,7 +917,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="wrapper">
+            <div class="wrapper border-foot">
               <div class="title-3">CONTACT US</div>
               <a>Need Help?</a>
               <a>FAQ</a>
@@ -961,10 +961,10 @@
             </div>
           </div>
         </div>
-        <div class="row justify-end">
+        <div class="row row-footer justify-end">
           <div class="col">
             <div class="wrapper join">
-              <div class="title-3">Join our newsletter</div>
+              <div class="title-3 ">Join our newsletter</div>
               <input
                 class="join-em"
                 type="email"
@@ -983,7 +983,7 @@
         <div class="row foot-bord flex justify-between align-center">
           <div class="col">
             <div class="wrapper">
-              <div class="logo-foot notranslate" translate="no">Rouge</div>
+              <div class="logo-foot notranslate " translate="no">Rouge</div>
             </div>
           </div>
           <div class="col">
@@ -1033,38 +1033,28 @@
           "google_translate_element",
         );
       }
-
       // CHANGE LANGUAGE
-
       function changeLang(lang) {
         let interval = setInterval(() => {
           let select = document.querySelector(".goog-te-combo");
-
           if (select) {
             select.value = lang;
-
             select.dispatchEvent(new Event("change"));
-
             clearInterval(interval);
           }
         }, 500);
       }
-
       // FLAGS CLICK
-
       document.querySelector(".en").addEventListener("click", () => {
         changeLang("en");
       });
-
       document.querySelector(".ru").addEventListener("click", () => {
         changeLang("ru");
       });
-
       document.querySelector(".arm").addEventListener("click", () => {
         changeLang("hy");
       });
     </script>
-
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="./js/main.js"></script>
   </body>

@@ -809,6 +809,7 @@ body {
 
 .join {
   padding: 20px;
+  text-align: center;
 }
 .join input {
   outline: none;
@@ -1301,5 +1302,11 @@ button {
   }
   .slide img {
     height: 200px;
+  }
+  .row-footer{
+    justify-content: center;
+  }
+  .foot-bord {
+    justify-content: center;
   }
 }

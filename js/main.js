@@ -865,54 +865,36 @@ sliderLoc.addEventListener("mouseleave", () => {
 // https://www.youtube.com/embed/9oRhKxxDHIg
 
 
+////Language changer
 const lng = document.querySelector('.lng');
 const active = document.querySelector('.lng-active');
-
 const activeFlag = document.querySelector('.active-flag');
 const activeText = document.querySelector('.active-text');
-
 active.addEventListener('click', () => {
-
     lng.classList.toggle('open');
-
 });
-
 document.querySelectorAll('.lng-dropdown > div').forEach(item => {
-
     item.addEventListener('click', () => {
-
         // GOOGLE TRANSLATE
-
         if(item.classList.contains('en')){
             changeLang('en');
         }
-
         if(item.classList.contains('ru')){
             changeLang('ru');
         }
-
         if(item.classList.contains('arm')){
             changeLang('hy');
         }
-
         // CHANGE TOP FLAG
-
         let img = item.querySelector('img').src;
         let text = item.querySelector('.f-name').innerText;
-
         activeFlag.src = img;
         activeText.innerText = text;
-
         // MOVE ITEMS
-
         let dropdown = document.querySelector('.lng-dropdown');
-
         dropdown.prepend(item);
-
         // CLOSE
-
         lng.classList.remove('open');
-
     });
-
 });
+//////////////
