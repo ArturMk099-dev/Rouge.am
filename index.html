@@ -1,10 +1,9 @@
 <!doctype html>
-<html lang="en" translate="no">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google" content="notranslate">
-    <title>Rouge</title>
+    <title class="notranslate" translate="no">Rouge</title>
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link
@@ -38,7 +37,7 @@
         <div class="row logo-head justify-between align-center">
           <div class="col">
             <div class="wrapper">
-              <div class="logo">Rouge</div>
+              <div class="logo notranslate" translate="no">Rouge</div>
             </div>
           </div>
           <div class="col">
@@ -59,13 +58,37 @@
               <div class="login">
                 <i class="fa-solid fa-arrow-right-to-bracket"></i>
               </div>
-              <div class="lng flex justify-between align-center gap-flag">
-                <img
-                  class="flag"
-                  src="https://avatars.mds.yandex.net/i?id=9529e53bb41d7f1585039c645c89562879b3d96b-9855122-images-thumbs&n=13"
-                  alt=""
-                />
-                <div class="f-name">en</div>
+              <div class="lng">
+                <div class="lng-active">
+                  <img class="active-flag flag" src="data:image/png;base64,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"/>
+                  <div class="active-text notranslate" translate="no">EN</div>
+                </div>
+                <div class="lng-dropdown">
+                  <div class="en flex justify-between align-center gap-flag">
+                    <img
+                      class="flag"
+                      src="data:image/png;base64,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"
+                      alt="en"
+                    />
+                    <div class="f-name notranslate" translate="no">en</div>
+                  </div>
+                  <div class="ru flex justify-between align-center gap-flag">
+                    <img
+                      class="flag"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAHlBMVEX////VKx4AOabe5PInVrMANaUAOaghN5G6LTnXKxsGVRdGAAAA+0lEQVR4nO3QsQGCABAAsUdQcP+F7f8q+2SEzAAAAAAAAAAAAAAAAAAAAAD86WSbi23ebPNic1JOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk5oP29xs87DNl20ONiflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aSclJNyUk7KSTkpJ+WknJSTclJOykk5KSflpJyUk3JSTspJOSkn5aR+Dv3m9vj2BDwAAAAASUVORK5CYII="
+                      alt="ru"
+                    />
+                    <div class="f-name notranslate" translate="no">ru</div>
+                  </div>
+                  <div class="arm flex justify-between align-center gap-flag">
+                    <img
+                      class="flag"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACfCAMAAABX0UX9AAAAFVBMVEXZABLyqAAAM6DjAAAANacAJKf9rwCWdlx+AAAA9UlEQVR4nO3QSQGAAAAEofXsH9kQ4xMisAEAAAAAAAAAAAAAAAAAAAD86CLYTbCTQF+iL9GX6Ev0JfoSfYm+RF+iL9GX6Ev0JfoSfYm+RF+iL9GX6Ev0JfoSfYm+RF+iL9GX6Ev0JfoSfYm+RF+iL9GX6Ev0JfoSfYm+RF+iL9GX6Ev0JfoSfYm+RF+iL9lDsJdgB4G+RF+iL9GX6Ev0JfoSfYm+RF+iL9GX6Ev0JfoSfYm+RF+iL9GX6Ev0JfoSfYm+RF+iL9GX6Ev0JfoSfYm+RF+iL9GX6Ev0JfoSfYm+RF+iL9GX6Ev0JfoSfYm+RF+iL/kAgQnVqWN3eLYAAAAASUVORK5CYII="
+                      alt="arm"
+                    />
+                    <div class="f-name notranslate" translate="no">arm</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -88,11 +111,15 @@
         <div class="row row-search">
           <div class="col col-search w-100">
             <div class="wrapper wrap-search">
-                <div class="head-search flex justify-between align-center">
-                  <input class="h-search w-100" type="text" placeholder="Search">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <div class="suggestions"></div>
+              <div class="head-search flex justify-between align-center">
+                <input
+                  class="h-search w-100"
+                  type="text"
+                  placeholder="Search"
+                />
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div class="suggestions"></div>
             </div>
           </div>
         </div>
@@ -148,10 +175,6 @@
           <div class="col">
             <div class="wrapper pam-2">
               <div class="title-2">VIDEO CLIPS</div>
-              <img
-                class="pamada desktop"
-                src="	https://www.rouge.am/_next/static/media/pamada2.1214d2e8.png"
-              />
             </div>
           </div>
         </div>
@@ -311,10 +334,6 @@
           <div class="col">
             <div class="wrapper pam">
               <div class="title-2">STORIES</div>
-              <img
-                class="pamada desktop"
-                src="	https://www.rouge.am/_next/static/media/pamada2.1214d2e8.png"
-              />
             </div>
           </div>
         </div>
@@ -421,10 +440,6 @@
           <div class="col">
             <div class="wrapper pam-3">
               <div class="title-2">Just arrived</div>
-              <img
-                class="pamada desktop"
-                src="	https://www.rouge.am/_next/static/media/pamada2.1214d2e8.png"
-              />
             </div>
           </div>
         </div>
@@ -439,10 +454,6 @@
           <div class="col">
             <div class="wrapper pam-4">
               <div class="title-2">ROUGE EXCLUSIVE</div>
-              <img
-                class="pamada desktop"
-                src="	https://www.rouge.am/_next/static/media/pamada2.1214d2e8.png"
-              />
             </div>
           </div>
         </div>
@@ -457,10 +468,6 @@
           <div class="col">
             <div class="wrapper pam-5">
               <div class="title-2">BESTSELLER</div>
-              <img
-                class="pamada desktop"
-                src="	https://www.rouge.am/_next/static/media/pamada2.1214d2e8.png"
-              />
             </div>
           </div>
         </div>
@@ -475,10 +482,6 @@
           <div class="col">
             <div class="wrapper pam-6">
               <div class="title-2">RECOMMEND FOR YOU</div>
-              <img
-                class="pamada desktop"
-                src="	https://www.rouge.am/_next/static/media/pamada2.1214d2e8.png"
-              />
             </div>
           </div>
         </div>
@@ -493,10 +496,6 @@
           <div class="col">
             <div class="wrapper pam-7">
               <div class="title-2">OUR LOCATIONS</div>
-              <img
-                class="pamada desktop"
-                src="	https://www.rouge.am/_next/static/media/pamada2.1214d2e8.png"
-              />
             </div>
           </div>
         </div>
@@ -984,7 +983,7 @@
         <div class="row foot-bord flex justify-between align-center">
           <div class="col">
             <div class="wrapper">
-              <div class="logo-foot">Rouge</div>
+              <div class="logo-foot notranslate" translate="no">Rouge</div>
             </div>
           </div>
           <div class="col">
@@ -1000,35 +999,73 @@
         </div>
       </section>
     </footer>
-   
 
     <div class="row video-modal">
       <div class="col video-content">
-         <span class="close">✖</span>
-         <iframe id="videoFrame" src="" allowfullscreen></iframe>
+        <span class="close">✖</span>
+        <iframe id="videoFrame" src="" allowfullscreen></iframe>
       </div>
     </div>
 
+    <section id="wishzone">
+      <div class="close">✖</div>
+      <div class="row wish-row flex-wrap"></div>
+    </section>
 
-   <section id="wishzone">
-    <div class="close">✖</div>
-    <div class="row wish-row flex-wrap">
+    <section id="cartzone">
+      <div class="close">✖</div>
+    </section>
 
-    </div>
-   </section> 
+    <section id="search-res">
+      <div
+        class="row search-result flex justify-center flex-wrap align-center"
+      ></div>
+    </section>
+    <div id="google_translate_element"></div>
 
-   <section id="cartzone">
-    <div class="close">✖</div>
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,ru,hy",
+          },
+          "google_translate_element",
+        );
+      }
 
-   </section>
-   
-   <section id="search-res">
-    <div class="row search-result flex justify-center flex-wrap align-center">
+      // CHANGE LANGUAGE
 
-    </div>
-   </section>
-   
+      function changeLang(lang) {
+        let interval = setInterval(() => {
+          let select = document.querySelector(".goog-te-combo");
 
+          if (select) {
+            select.value = lang;
+
+            select.dispatchEvent(new Event("change"));
+
+            clearInterval(interval);
+          }
+        }, 500);
+      }
+
+      // FLAGS CLICK
+
+      document.querySelector(".en").addEventListener("click", () => {
+        changeLang("en");
+      });
+
+      document.querySelector(".ru").addEventListener("click", () => {
+        changeLang("ru");
+      });
+
+      document.querySelector(".arm").addEventListener("click", () => {
+        changeLang("hy");
+      });
+    </script>
+
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

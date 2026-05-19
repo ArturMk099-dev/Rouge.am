@@ -1,9 +1,6 @@
 ////first slider
 const fotos = [
   [
-    "https://www.rouge.am/_next/image?url=https%3A%2F%2Frouge.am%3A8005%2Fstorage%2Fimages%2FWD3MYltxLPflws7HZbvGItanDaohW8KJ5JVKUEZ8.jpg&w=1920&q=100",
-  ],
-  [
     "https://www.rouge.am/_next/image?url=https%3A%2F%2Frouge.am%3A8005%2Fstorage%2Fimages%2FMcAQykf7an16r8Hloc9s5zcW75sniYGYV5Gp7Dv3.jpg&w=828&q=100",
     "https://www.rouge.am/_next/image?url=https%3A%2F%2Frouge.am%3A8005%2Fstorage%2Fimages%2FccarBNVi3wHnrFT8o7zUb8hqtOHnHGnj2x7Dp5BY.jpg&w=828&q=100",
     "https://www.rouge.am/_next/image?url=https%3A%2F%2Frouge.am%3A8005%2Fstorage%2Fimages%2Fn2JuiEGGwIxG2Pp3FCIsR4eLNaNF3kGkytU9cLFv.png&w=828&q=100",
@@ -11,19 +8,10 @@ const fotos = [
     "https://www.rouge.am/_next/image?url=https%3A%2F%2Frouge.am%3A8005%2Fstorage%2Fimages%2FVnb0asGHdECgvjTGxt9iAThHQ5GjLuqSZSFFkxCH.png&w=828&q=100",
   ],
   [
-    "https://www.rouge.am/_next/image?url=https%3A%2F%2Frouge.am%3A8005%2Fstorage%2Fimages%2FZAtG7bKFHaD5EEmZ2ELh9VB8mhpRnqdeY0p6lC3m.jpg&w=1920&q=100",
+    "https://www.rouge.am/_next/image?url=https%3A%2F%2Frouge.am%3A8005%2Fstorage%2Fimages%2F3UeZWdR36uIQvpHJFz1HiFMabCVo1dD707y1chlZ.png&w=1920&q=100",
   ],
   [
-    "https://www.rouge.am/_next/image?url=https%3A%2F%2Frouge.am%3A8005%2Fstorage%2Fimages%2FIGfFQLKSFN6q31BYfvF3yftTpBUXLPMRWZlD1qC7.jpg&w=1920&q=100",
-  ],
-  [
-    "https://www.rouge.am/_next/image?url=https%3A%2F%2Frouge.am%3A8005%2Fstorage%2Fimages%2FvHBKQcBYmrjui0joPFErevk6HabQG5seecEBMXEN.jpg&w=1920&q=100",
-  ],
-  [
-    "https://www.rouge.am/_next/image?url=https%3A%2F%2Frouge.am%3A8005%2Fstorage%2Fimages%2FbYxfGQGVQWmROwQtpXW6J7AtFli7DxnRLFS7gV0K.png&w=1920&q=100",
-  ],
-  [
-    "https://www.rouge.am/_next/image?url=https%3A%2F%2Frouge.am%3A8005%2Fstorage%2Fimages%2FOmJjuDkzejO686gubLBkCTR4emJQkdf7BZQPf7ue.png&w=1920&q=100",
+    "https://www.rouge.am/_next/image?url=https%3A%2F%2Frouge.am%3A8005%2Fstorage%2Fimages%2FVudIdzuDNTwoorGad0hQBpMkrRFBtupaShhdjKUK.jpg&w=1920&q=100",
   ],
 ];
 
@@ -41,7 +29,7 @@ for (let k = 0; k < fotos.length; k++) {
     img.src = fotos[k][j];
     img.style.width = width + "%";
 
-    if (k === 1 && j === 0) {
+    if (k === 0 && j === 0) {
       img.style.cursor = "pointer";
 
       img.addEventListener("click", () => {
@@ -49,7 +37,7 @@ for (let k = 0; k < fotos.length; k++) {
       });
     }
 
-    if (k === 1 && j === 1) {
+    if (k === 0 && j === 1) {
       img.style.cursor = "pointer";
 
       img.addEventListener("click", () => {
@@ -57,7 +45,7 @@ for (let k = 0; k < fotos.length; k++) {
       });
     }
 
-    if (k === 1 && j === 2) {
+    if (k === 0 && j === 2) {
       img.style.cursor = "pointer";
 
       img.addEventListener("click", () => {
@@ -65,7 +53,7 @@ for (let k = 0; k < fotos.length; k++) {
       });
     }
 
-    if (k === 1 && j === 3) {
+    if (k === 0 && j === 3) {
       img.style.cursor = "pointer";
 
       img.addEventListener("click", () => {
@@ -73,7 +61,7 @@ for (let k = 0; k < fotos.length; k++) {
       });
     }
 
-    if (k === 1 && j === 4) {
+    if (k === 0 && j === 4) {
       img.style.cursor = "pointer";
 
       img.addEventListener("click", () => {
@@ -81,7 +69,7 @@ for (let k = 0; k < fotos.length; k++) {
       });
     }
 
-    if (k === 1 && j < 5) {
+    if (k === 0 && j < 5) {
       img.classList.add("first-slide-img");
     }
     slide.appendChild(img);
@@ -875,3 +863,56 @@ sliderLoc.addEventListener("mouseleave", () => {
 // https://www.youtube.com/embed/nPglEYGRwmE
 
 // https://www.youtube.com/embed/9oRhKxxDHIg
+
+
+const lng = document.querySelector('.lng');
+const active = document.querySelector('.lng-active');
+
+const activeFlag = document.querySelector('.active-flag');
+const activeText = document.querySelector('.active-text');
+
+active.addEventListener('click', () => {
+
+    lng.classList.toggle('open');
+
+});
+
+document.querySelectorAll('.lng-dropdown > div').forEach(item => {
+
+    item.addEventListener('click', () => {
+
+        // GOOGLE TRANSLATE
+
+        if(item.classList.contains('en')){
+            changeLang('en');
+        }
+
+        if(item.classList.contains('ru')){
+            changeLang('ru');
+        }
+
+        if(item.classList.contains('arm')){
+            changeLang('hy');
+        }
+
+        // CHANGE TOP FLAG
+
+        let img = item.querySelector('img').src;
+        let text = item.querySelector('.f-name').innerText;
+
+        activeFlag.src = img;
+        activeText.innerText = text;
+
+        // MOVE ITEMS
+
+        let dropdown = document.querySelector('.lng-dropdown');
+
+        dropdown.prepend(item);
+
+        // CLOSE
+
+        lng.classList.remove('open');
+
+    });
+
+});
